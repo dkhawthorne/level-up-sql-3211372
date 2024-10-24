@@ -11,4 +11,5 @@ SELECT
 FROM Loans l
 JOIN Books b ON l.BookID = b.BookID
 JOIN Patrons p ON l.PatronIN = p.PatronID
-WHERE DueDate = '2022-07-13';
+WHERE l.DueDate = '2022-07-13'
+AND l.ReturnedDate IS NULL;
